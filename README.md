@@ -51,7 +51,7 @@ A standard MapReduce would follow these six steps:
 
 Wordcount is the simplest implementation of MapReduce task. Let's get our hands dirty now. Given the sentence below:
 
-![ppap](https://cloud.githubusercontent.com/assets/14355257/19906093/ca4cf962-a04f-11e6-9d9e-0e4053259dbe.png)
+![ppap](https://cloud.githubusercontent.com/assets/14355257/19906093/ca4cf962-a04f-11e6-9d9e-0e4053259dbe.png)(https://www.youtube.com/watch?v=d9TpRfDdyU0)
 <center>__"I have a pan, I have an applie, ah, apple-pan."__</center>
 
 We firstly clean up the text line using this clean function. We will implement similar cleaning process inside our mapper function later. 
