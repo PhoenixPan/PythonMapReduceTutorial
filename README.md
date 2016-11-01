@@ -276,7 +276,7 @@ We cannot run and display the result here, as shakespeare is a large file and th
 ## Elastic MapReduce
 Amazon Web Services (AWS) is one of the most popular cloud computing services available for all parties. AWS offers various services that support all kinds of missions developers may have. In our scope, we will use the Elastic MapReduce (EMR) service from AWS.
 
-#### Get Our AWS Ready  
+#### Get Our EMR Ready  
   
 1. Log into our AWS account, go to "Security Credentials", create a new credential, and download it(automatically);  
 2. Create a configuation file named "mrjob.conf", copy the following contents inside:  
