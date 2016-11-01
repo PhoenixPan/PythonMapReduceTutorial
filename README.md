@@ -184,6 +184,9 @@ with mr_job.make_runner() as runner:
         key, value = mr_job.parse_output_line(line)
         print key, value
 ```
+If you want to test your code in linux environment, use this command:  
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`python my_mapr.py < example.txt`
+
 
 ## Let's Talk About Shakespeare
 
