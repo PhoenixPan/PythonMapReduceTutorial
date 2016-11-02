@@ -17,6 +17,7 @@ Thanks to all the open-source communities, we do. One of the most popular model 
 - [Build Your Own Hadoop Cluster](#Build-Your-Own-Hadoop-Cluster)
 - [Summary](#Summary)
 - [References](#References)
+   
 <a id="MapReduce"></a>  
 ## MapReduce  
 
