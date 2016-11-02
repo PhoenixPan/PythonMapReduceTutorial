@@ -10,7 +10,7 @@ Thanks to all the open-source communities, we do. One of the most popular model 
 
 - [MapReduce](#MapReduce)
 - [Understanding MapReduce: Wordcount](#Understanding-MapReduce:-Wordcount)
-- [Meet mrjob](#Meet-mrjob)
+- [Meet mrjob](README#Meet-mrjob)
 - [Let's Talk About Shakespeare](#Let's-Talk-About-Shakespeare)
 - [Elastic MapReduce](#Elastic-MapReduce)
 - [Streaming Hadoop MapReduce](#Streaming-Hadoop-MapReduce)
