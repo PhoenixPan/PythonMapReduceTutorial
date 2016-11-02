@@ -8,7 +8,7 @@ Thanks to all the open-source communities, we do. One of the most popular model 
 
 #### Tutorial Content
 
-- [MapReduce](#MapReduce)
+- [MapReduce](##MapReduce)
 - [Understanding MapReduce: Wordcount](#Understanding-MapReduce:-Wordcount)
 - [Meet mrjob](#Meet-mrjob)
 - [Let's Talk About Shakespeare](#Let's-Talk-About-Shakespeare)
