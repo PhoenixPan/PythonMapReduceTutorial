@@ -9,7 +9,7 @@ Thanks to all the open-source communities, we do. One of the most popular model 
 #### Tutorial Content
 
 - [MapReduce](#MapReduce)
-- [Understanding MapReduce: Wordcount](#Understanding-MapReduce:-Wordcount)
+- [Understanding MapReduce: Wordcount](#Understanding-MapReduce-Wordcount)
 - [Meet mrjob](#Meet-mrjob)
 - [Let's Talk About Shakespeare](#Let's-Talk-About-Shakespeare)
 - [Elastic MapReduce](#Elastic-MapReduce)
@@ -47,7 +47,7 @@ A standard MapReduce would follow these six steps:
 
 (Step 3, 4 and 5 are often recogized as one "Shuffle" stage in many cases, as they are closed related and are not controlled by user functions)    
 
-## Understanding MapReduce: Wordcount <a id="Understanding-MapReduce:-Wordcount"></a> 
+## Understanding MapReduce: Wordcount <a id="Understanding-MapReduce-Wordcount"></a> 
 
 Wordcount is the simplest implementation of MapReduce task. Let's get our hands dirty now. Given the sentence below:
 
