@@ -460,7 +460,7 @@ for each in result:
     print '%s\t%s' % (each[0], each[1])
 ```
 
-<a id="Build-Your-Own Hadoop-Cluster"></a>  
+<a id="Build-Your-Own-Hadoop-Cluster"></a>  
 ## Build Your Own Hadoop Cluster  
 
 To avoid the high costs of AWS EMR, we could also run Hadoop MapReduce tasks locally on linux machines. I have successfully set up the Hadoop environment, but got challenged when I tried to run my program on a cluster of virtual machines. However, this is a valid way to execute a Hadoop MapReduce program and should be concerned when you have limited budget.  
