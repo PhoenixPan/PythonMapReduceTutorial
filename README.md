@@ -17,8 +17,8 @@ Thanks to all the open-source communities, we do. One of the most popular model 
 - [Build Your Own Hadoop Cluster](#Build-Your-Own-Hadoop-Cluster)
 - [Summary](#Summary)
 - [References](#References)
-
-## MapReduce <a id="MapReduce"></a> 
+<a id="MapReduce"></a>  
+## MapReduce  
 
 The MapReduce programming model is designed to process big dataset using a large number of machines in-parallel. It could be illustrated as a "server farm". The main advantage of MapReduce is to process data on a flexible scale over many machines. Imagine you are processing a dataset of 100TB, it may take days to complete this task on a single machine, even it's a very powerful one, but perhaps only a few hours on a cluster of twenty regular machines, as they are working simultaneously and collaboratively on one dataset. 
 
@@ -46,8 +46,8 @@ A standard MapReduce would follow these six steps:
 6. **Reduce-Reduce**: A partiion, a group of data, will be processed by our reduce() function in this task. Ususally, it should summarize the output, leading to a significant reduce in the data size, as this task removes redundancy;
 
 (Step 3, 4 and 5 are often recogized as one "Shuffle" stage in many cases, as they are closed related and are not controlled by user functions)    
-
-## Understanding MapReduce: Wordcount <a id="Understanding-MapReduce-Wordcount"></a> 
+<a id="Understanding-MapReduce-Wordcount"></a> 
+## Understanding MapReduce: Wordcount  
 
 Wordcount is the simplest implementation of MapReduce task. Let's get our hands dirty now. Given the sentence below:
 
@@ -143,6 +143,7 @@ Reducer 3: {"apple":2}
 
 The final results of word counts will be put to target HDFS directory at the user's disposal.
 
+<a id="Meet-mrjob"></a>  
 ## Meet mrjob
 
 [mrjob](https://pythonhosted.org/mrjob/index.html) is a ad-hoc library for python programs to operate on Hadoop MapReduce. We will use mrjob library to write our program for Hadoop MapReduce. Although we can also use no library with simple sys.in, mrjob is more integrated and allows us to run and debug locally (also allows us to disply the result in Jupyter). Each mrjob has to have at least one mapper, one combiner(shuffle), and one reducer, included in one or multiple "steps". 
@@ -187,7 +188,7 @@ with mr_job.make_runner() as runner:
 If you want to test your code in linux environment, use this command:  
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`python my_mapr.py < example.txt`
 
-
+<a id="Let's-Talk-About-Shakespeare"></a> 
 ## Let's Talk About Shakespeare
 
 In this part, we will count the number of words in "shakespeare.txt", which we used in a previous project, and fine out the top 100 words used. Though it is not a huge file(4MB), it is plain text and contains very rich contents. The file can thus generate a very representative output of a Hadoop MapReduce job. If you are looking for a larger dataset, you could tend to [Twitter](https://dev.twitter.com/docs), [Wikipedia](https://www.mediawiki.org/wiki/API:Main_page), or [this guide](http://kevinchai.net/datasets)
@@ -273,9 +274,11 @@ if __name__ == '__main__':
 
 We cannot run and display the result here, as shakespeare is a large file and thus there are too many arguments for input, leading to exception: "[Errno 22] Invalid argument". In addition, it would also be a challenge for our memory.
 
+<a id="Elastic-MapReduce"></a> 
 ## Elastic MapReduce
 Amazon Web Services (AWS) is one of the most popular cloud computing services available for all parties. AWS offers various services that support all kinds of missions developers may have. In our scope, we will use the Elastic MapReduce (EMR) service from AWS.
 
+<a id="Get-Our-EMR-Ready"></a>  
 #### Get Our EMR Ready  
   
 1. Log into our AWS account, go to "Security Credentials", create a new credential, and download it(automatically);  
@@ -409,7 +412,7 @@ runners:
 # "these" 1282
 # "some"  1281
 ```
-
+<a id="Streaming-Hadoop-MapReduce"></a>
 ## Streaming Hadoop MapReduce
 
 If you have low demand on local tests or do not want to use mrjob library and set up the EMR environment, I get a good news for you. There is a way to generate output file without even logging in to your node: Streaming. We simply tell the cluster where the mapper, reducer, input file, output file are and the cluster will finish all tasks automatically. Using streaming, we have to upload all the required to S3 stroage and download the output from it as well. Noteice that there is no combiner, so we have to make some changes to our programs, because reducer will now take the output of mapper as input. To create a streaming MapReduce program, we need to launch an EMR cluster with these configurations changed:  
@@ -455,7 +458,9 @@ result = counter.most_common(100)
 for each in result:
     print '%s\t%s' % (each[0], each[1])
 ```
-## Build Your Own Hadoop Cluster
+
+<a id="Build-Your-Own Hadoop-Cluster"></a>  
+## Build Your Own Hadoop Cluster  
 
 To avoid the high costs of AWS EMR, we could also run Hadoop MapReduce tasks locally on linux machines. I have successfully set up the Hadoop environment, but got challenged when I tried to run my program on a cluster of virtual machines. However, this is a valid way to execute a Hadoop MapReduce program and should be concerned when you have limited budget.  
 
@@ -464,6 +469,7 @@ If you have a PC, you can download [VirtualBox](https://www.virtualbox.org/wiki/
 1. [Running Hadoop on Ubuntu Linux (Single-Node Cluster)](http://www.michael-noll.com/tutorials/running-hadoop-on-ubuntu-linux-single-node-cluster/)  
 2. [Setting up a Apache Hadoop 2.7 single node on Ubuntu 14.04](http://thepowerofdata.io/setting-up-a-apache-hadoop-2-7-single-node-on-ubuntu-14-04/)  
 
+<a id="Summary"></a>
 ## Summary
 
 Now, you know at least three ways to perform MapReduce tasks: with regular EMR, with streaming EMR, and with local machines. Though we only talked about word count here, there are other tasks you can perform using MapReduce and their idea is the same: map and then reduce. One example is to find mutual friends, based on which you can make friend recommendation. This is a common model used by many organizations such as Facebook and Linkedin.  
@@ -472,6 +478,7 @@ In a word, there is a lot more to explore about MapReduce, a mature and practica
 ![recommendation](https://cloud.githubusercontent.com/assets/14355257/19906092/c91b8036-a04f-11e6-8bd6-5bffe4e8a5f1.jpg)
 <center>__Using MapReduce to Find Common Friend__</center>
 
+<a id="References"></a>
 ## References   
 [Apache Hadoop](http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.0/hadoop-2.7.0.tar.gz)  
 [mrjob v0.5.6 documentation](https://pythonhosted.org/mrjob/index.html)  
