@@ -18,7 +18,7 @@ Thanks to all the open-source communities, we do. One of the most popular model 
 - [Summary](#Summary)
 - [References](#References)
 
-##MapReduce
+## MapReduce <a id="MapReduce"></a> 
 
 The MapReduce programming model is designed to process big dataset using a large number of machines in-parallel. It could be illustrated as a "server farm". The main advantage of MapReduce is to process data on a flexible scale over many machines. Imagine you are processing a dataset of 100TB, it may take days to complete this task on a single machine, even it's a very powerful one, but perhaps only a few hours on a cluster of twenty regular machines, as they are working simultaneously and collaboratively on one dataset. 
 
