@@ -30,7 +30,7 @@ The MapReduce programming model is designed to process big dataset using a large
 #### How it works
 (skip this part if you want, it's easier to read the following examples)
 
-Hadoop MapReduce has mainly two phases: Map and Reduce. The "map phrase" includes split, map, and partition tasks and the "reduce phase" includes shuffle, merge & sort, and reduce tasks. There should be at least one map task and zero or more reduce tasks in a MapReduce job. The job first creates HDFS partitions by spliting the dataset into chunks of a certain size and then distribute the chunks to all the nodes in the cluster. MapReduce jobs can process HDFS blocks in parallel at distributed machines and save the output to one directory.
+Hadoop MapReduce has mainly two phases: Map and Reduce. The "map phrase" includes split, map, and partition tasks and the "reduce phase" includes shuffle, merge & sort, and reduce tasks. There should be at least one map task and zero or more reduce tasks in a MapReduce job. The job first creates HDFS partitions by splitting the dataset into chunks of a certain size and then distribute the chunks to all the nodes in the cluster. MapReduce jobs can process HDFS blocks in parallel at distributed machines and save the output to one directory.
 
 A standard MapReduce would follow these six steps:  
 
