@@ -34,7 +34,7 @@ Hadoop MapReduce has mainly two phases: Map and Reduce. The "map phrase" include
 
 A standard MapReduce would follow these six steps:  
 
-1. **Map-Spliting**: The dataset is firstly splited into HDFS blocks chunks. If a file is smaller than the size limit, it remains intact, otherwise it will be split. The default size of each chunk is 100MB, but this can be determined by user configuraion. For example, if we have two files for the MapReduce job, one at 87MB and the other at 123MB, we will have three HDFS chunks: 87MB, 100MB, 23MB. This process will be completed automatically by Hadoop MapReduce and is not controled by our code; 
+1. **Map-Splitting**: The dataset is firstly splited into HDFS blocks chunks. If a file is smaller than the size limit, it remains intact, otherwise it will be split. The default size of each chunk is 100MB, but this can be determined by user configuraion. For example, if we have two files for the MapReduce job, one at 87MB and the other at 123MB, we will have three HDFS chunks: 87MB, 100MB, 23MB. This process will be completed automatically by Hadoop MapReduce and is not controled by our code; 
 
 2. **Map-Map**: This task is where our code for Map phase gets executed. For each line of the data, our map() function is invoked to process the line according to the desired patterns. The output of our map() function would be key-value pairs. For example, if we analyze an article, we may break lines into words, and generate a key-value pair for each word as ['word':1]. This is a process where we "extend" our data with redundancy;
 
