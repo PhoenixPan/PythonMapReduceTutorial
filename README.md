@@ -25,7 +25,7 @@ The MapReduce programming model is designed to process big dataset using a large
 
 #### Hadoop MapReduce
 
-[Hadoop MapReduce](http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.0/hadoop-2.7.0.tar.gz) is an open-source implementation of Google's MapReduce. Though Hadoop MapReduce is written in Java, its implementation can be realzied through other languages, such as Python and C. Hadoop MapReduce uses the Hadoop Distributed File System (HDFS) as the underlying file system. 
+[Hadoop MapReduce](http://www.apache.org/dyn/closer.cgi/hadoop/common/hadoop-2.7.0/hadoop-2.7.0.tar.gz) is an open-source implementation of Google's MapReduce. Though Hadoop MapReduce is written in Java, its implementation can be realzied through other languages, such as Python and C. Hadoop MapReduce uses the Hadoop Distributed File System (HDFS) as the underlying file system.  
 
 #### How it works
 (skip this part if you want, it's easier to read the following examples)
