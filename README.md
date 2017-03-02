@@ -1,4 +1,5 @@
 # MapReduce on AWS
+by Phoenix Jiabei Pan
 
 ## Introduction
 
